@@ -1,0 +1,52 @@
+@productHost = http://localhost:3003/products
+@clientHost = http://localhost:3003/clients
+@saleHost = http://localhost:3003/sales
+
+### getProducts
+GET {{productHost}}/all
+
+
+### addProduct
+POST {{productHost}}/add
+Content-Type: application/json
+
+{
+    "photo": "banana",
+    "name": "Comida caseira",
+    "price": 39.90
+}
+
+
+### getClients
+GET {{clientHost}}/all
+
+
+### addClient
+POST {{clientHost}}/add
+Content-Type: application/json
+
+{
+    "name": "mesa 1"
+}
+
+
+### getSales
+GET {{saleHost}}/all
+
+### addSale
+POST {{saleHost}}/add
+Content-Type: application/json
+
+{
+    "product": {
+    "_id": "2439a289-20e3-4e44-ac91-5a8762d3b4f4",
+    "photo": "banana",
+    "name": "Comida caseira",
+    "price": 39.9
+    },
+    "qtt": 2,
+    "client": {
+        "_id": "e164c137-2a99-460a-b3ff-1728a654c6d8",
+        "name": "mesa 1"
+    }
+}
