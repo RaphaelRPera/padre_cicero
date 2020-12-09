@@ -1,7 +1,8 @@
 import { action, thunk } from 'easy-peasy'
 import axios from 'axios'
 
-const baseUrl = 'http://localhost:3003'
+// const baseUrl = 'http://localhost:3003'
+const baseUrl = 'https://padre-cicero.herokuapp.com'
 
 export const productStore = {
     product: {},
@@ -13,7 +14,6 @@ export const productStore = {
 
     getProducts: thunk(async (actions, product) => {
         const {data} = await axios.get(`${baseUrl}/products/all`)
-        // console.log('[productStore]: getProducts:', data)
         actions.setProducts(data)
     }),
 }
@@ -33,7 +33,6 @@ export const clientStore = {
 
     getClients: thunk(async (actions) => {
         const {data} = await axios.get(`${baseUrl}/clients/all`)
-        // console.log('[clientStore]: getClients:', data)
         actions.setClients(data)
     }),
 }
