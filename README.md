@@ -1,14 +1,26 @@
-# padre_cicero
+# Padre Cicero - Sistema de Controle de Vendas
 Sistema de controle de vendas do restaurante Padre Cícero
 
-Desafio:
+## [padre-cicero.surge.sh](http://padre-cicero.surge.sh/)
 
-"O desafio se constitui em construir um sistema de controle de vendas para o restaurante Padre Cícero.
 
-Vai ser preciso pelo menos cadastrar produtos, executar vendas e ver o que foi vendido.
+## O sistema realiza as seguintes operaçoes:
+- Cadastrar novo produto
+- Realizar venda, escolhendo o cliente e as quantidades dos produtos desejados
+- Consultar as vendas realizadas
 
-Gostaríamos que você usasse o mongoDB como estrutura de banco de dados e backend rest com as lib: mongoose ou typegoose, já no front as libs: easy-peasy, styled-components, react-table e axios.
 
-Deixamos bem livre a parte de design, pois queremos que você nos surpreenda e as libs que gostaríamos que você usasse, são algumas das que usamos aqui."
+## Frontend - Stacks e Deploy
+- React.js
+- styled-components
+- easy-peasy
+- axios
+- Deploy com Surge
 
-Em geral damos 01 semana para resolução, vc pode enviar o link do github com a resolução para mim:
+## Backend - Stacks e Deploy
+- MongoDB
+- Mongoose
+- Typescript
+- Express
+- Cors
+- Deploy com Heroku
