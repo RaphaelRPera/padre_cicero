@@ -9,6 +9,9 @@ Sistema de controle de vendas do restaurante Padre Cícero
 - Realizar venda, escolhendo o cliente e as quantidades dos produtos desejados
 - Consultar as vendas realizadas
 
+Todas as funcionalidades operando normalmente.
+
+O Backend já possui estrutura para a implementação de novas funcionalidades como cadastro  e listagem de clientes
 
 ## Frontend - Stacks e Deploy
 - React.js
