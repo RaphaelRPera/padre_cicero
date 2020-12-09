@@ -2,7 +2,8 @@
 import express, { Express } from "express"
 import cors from "cors"
 import { productRouter, clientRouter, saleRouter } from './router/router'
-
+import dotenv from 'dotenv'
+dotenv.config()
 
 
 /**************************** CONFIG ******************************/
@@ -18,6 +19,6 @@ app.use('/sales', saleRouter)
 
 
 /**************************** SERVER INIT ******************************/
-app.listen(3003, () => {
+app.listen(process.env.PORT || 3003, () => {
    console.log("Server running on port 3003")
 })
