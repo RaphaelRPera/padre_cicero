@@ -1,7 +1,6 @@
 import React from 'react'
 import { LineImg } from './styleLine'
 import { LineColumn, LineContainer, QttInput } from './styleLine'
-import caipiraImg from '../../img/caipira.jpg'
 import { useForm } from '../../hooks/useForm'
 
 
@@ -25,7 +24,7 @@ export const SaleLine = (props) => {
     return (
         <LineContainer visible={props.visible} >
             <LineColumn> {props.num} </LineColumn>
-            <LineColumn> <LineImg src={caipiraImg} /> </LineColumn>
+            <LineColumn> <LineImg src={photo} /> </LineColumn>
             <LineColumn> {name} </LineColumn>
             <LineColumn> {price.toFixed(2).replace('.', ',')} </LineColumn>
 

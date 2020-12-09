@@ -1,10 +1,12 @@
+import { useStoreActions } from 'easy-peasy'
 import React, { useState } from 'react'
-import { addProduct } from '../../services/product'
 import { Button, Form, Input, Label, NotValidBox, PageContainer, Title } from './style'
 
 
 export const ProductAdd = () => {
     const [form, setForm] = useState({})
+
+    const postProduct = useStoreActions(actions => actions.product.postProduct)
 
     const handleInput = (event) => {
         const {value, name} = event.target
@@ -31,7 +33,12 @@ export const ProductAdd = () => {
         const price = Number(form.price.replace(',','.'))
         if (isNaN(price)) {setForm({...form, priceIsValid: false}); return}
 
-        await addProduct({name, photo, price})
+        postProduct({name, photo, price})
+
+        setTimeout(()  => {
+            setForm({name: '', photo: '', price: ''})
+            window.alert('Produto cadastrado com sucesso')
+        }, 600)
     }
 
     return (

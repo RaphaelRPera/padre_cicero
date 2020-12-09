@@ -1,7 +1,6 @@
 import React from 'react'
 import { LineImg } from './styleLine'
 import { LineColumn, LineContainer } from './styleLine'
-import caipiraImg from '../../img/caipira.jpg'
 
 
 export const SaleLine = (props) => {
@@ -9,7 +8,7 @@ export const SaleLine = (props) => {
 
     const cliName = client.name
     const prodName = product.name
-    // const prodPhoto = product.photo
+    const prodPhoto = product.photo
     const prodPrice = product.price
 
     const date = new Date(Number(timeStamp)).toLocaleDateString("pt-BR")
@@ -17,7 +16,7 @@ export const SaleLine = (props) => {
     return (
         <LineContainer visible={true} >
             <LineColumn> {props.num} </LineColumn>
-            <LineColumn> <LineImg src={caipiraImg} /> </LineColumn>
+            <LineColumn> <LineImg src={prodPhoto} /> </LineColumn>
             <LineColumn> {prodName} </LineColumn>
             <LineColumn> {date} </LineColumn>
             <LineColumn> {cliName} </LineColumn>

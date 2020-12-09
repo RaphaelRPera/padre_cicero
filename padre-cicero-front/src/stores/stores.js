@@ -16,6 +16,10 @@ export const productStore = {
         const {data} = await axios.get(`${baseUrl}/products/all`)
         actions.setProducts(data)
     }),
+
+    postProduct: thunk(async (actions, body) => {
+        await axios.post(`${baseUrl}/products/add`, body)
+    }),
 }
 
 
